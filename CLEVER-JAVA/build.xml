@@ -31,7 +31,6 @@
     <pathelement path="${jpf-core.native_classpath}"/>
   	<pathelement path="${jpf-symbc.native_classpath}"/>
     <pathelement path="${jpf-shadow.native_classpath}"/>
-
   </path>
 
   <target name="-init">
@@ -208,7 +207,7 @@
   </target> -->
 
   <target name="run">
-    <java classname="org.softwaretesting.Main" fork="true" classpath="build/CLEVER_JAVA.jar" classpathref="lib.path"/>
+    <java classname="org.softwaretesting.Main" fork="true"  classpath="build/CLEVER_JAVA.jar" classpathref="lib.path"/>
   </target>
 
 </project>

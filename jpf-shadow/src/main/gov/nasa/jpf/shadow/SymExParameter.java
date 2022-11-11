@@ -1,5 +1,6 @@
 package gov.nasa.jpf.shadow;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +11,9 @@ import java.util.Map;
  *
  */
 @SuppressWarnings("serial")
-public class SymExParameter {
+public class SymExParameter implements Serializable{
+    
+    private final static long serialVersionUID = 1;
 
     public String classpath;
     public String sourcepath;

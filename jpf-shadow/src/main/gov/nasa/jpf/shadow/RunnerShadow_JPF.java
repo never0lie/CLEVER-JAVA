@@ -1,20 +1,24 @@
 package gov.nasa.jpf.shadow;
 
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+// import java.io.ObjectInputFilter.Config;
+import java.io.ObjectInputStream;
 import java.io.PrintStream;
+import java.util.Base64;
 import java.util.Map;
 import java.util.Set;
 
-import gov.nasa.jpf.Config;
 import gov.nasa.jpf.JPF;
 import gov.nasa.jpf.JPFConfigException;
 import gov.nasa.jpf.JPFException;
 import gov.nasa.jpf.shadow.MyPathCondition.PathResultType;
 import gov.nasa.jpf.symbc.SymbolicListener;
+import gov.nasa.jpf.Config;
 
 /**
  * Experiment execution class.
@@ -22,10 +26,10 @@ import gov.nasa.jpf.symbc.SymbolicListener;
  */
 public class RunnerShadow_JPF {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException,ClassNotFoundException {
         System.out.println(">> Started Runner for jpf-shadow ...");
 
-        SymExParameter[] subjects = {
+        // SymExParameter[] subjects = {
 //                SymExParameter_JPF.Foo_JPF,
 //                SymExParameter_JPF.Joda_LocalToUTC,
 //                SymExParameter_JPF.Rational_abs,
@@ -33,10 +37,15 @@ public class RunnerShadow_JPF {
 //                SymExParameter_JPF.Rational_simplify,
 //                SymExParameter_JPF.WBS_update,
 //                SymExParameter_JPF.WBS_launch,
-//                SymExParameter_JPF.Add,
+              //  SymExParameter_JPF.Add,
                 // SymExParameter_JPF.GetSign
-                SymExParameter_JPF.LoopMul2
-        };
+                // SymExParameter_JPF.LoopMul2
+        // };
+
+        SymExParameter[] subjects = new SymExParameter[args.length];
+        for (int i = 0;i < args.length;i++) {
+          subjects[i] = (SymExParameter) deserialize(args[i]);
+        }
 
         try {
             runExperiments(subjects);
@@ -45,7 +54,17 @@ public class RunnerShadow_JPF {
         }
     }
 
-    public static Set<MyPathCondition> executeShadowSymbolicExecutionForMethod(SymExParameter param) {
+    private static Object deserialize( String s ) throws IOException ,
+                                                       ClassNotFoundException {
+        byte [] data = Base64.getDecoder().decode( s );
+        ObjectInputStream ois = new ObjectInputStream( 
+                                        new ByteArrayInputStream(  data ) );
+        Object o  = ois.readObject();
+        ois.close();
+        return o;
+   }
+
+    private static Set<MyPathCondition> executeShadowSymbolicExecutionForMethod(SymExParameter param) {
         ShadowListener shadowListener = null;
         try {
             Config conf = initConfig();

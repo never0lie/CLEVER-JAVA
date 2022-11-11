@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="maven-antrun-" default="main">
-  <target name="main">
-    <ant antfile="/home/shared/CLEVER-JAVA/jpf-shadow/build.xml">
-      <target name="-init" />
-      <target name="compile" />
-    </ant>
-  </target>
-</project>
