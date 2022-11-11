@@ -1,18 +1,13 @@
 package jpf2019.add;
 
 class Add_1c {
-    int change(int oldVal,int newVal) {return oldVal;}
+    int change(Integer oldVal,Integer newVal) {return oldVal;}
+    boolean change(boolean oldVal, boolean newVal) {return oldVal;}
 
-    int add(int a, int b) {
+    int add(Integer a, Integer b) {
 
-        int c = change(a, b);
-        int d = change(b, a);
-
-        if (c > d) {
-            return 1;
-        } else {
-            return 2;
-        }
+       Integer c = change(a + b, b + a);
+       return c;
 
     }
 

@@ -5,7 +5,12 @@ sourcepath=${jpf-symbc}/src/examples
 
 symbolic.method = summerschool.Loop.test(sym)
 
+symbolic.min_int=0
+symbolic.max_int=6
+
 symbolic.debug=true
+symbolic.lazy=on
+symbolic.strings=false
 search.depth_limit=10
 listener = gov.nasa.jpf.symbc.SymbolicListener
 

@@ -20,10 +20,17 @@ package summerschool;
 
 public class Loop {
 
-	static void test(int n) {
+	static int test(int n) {
 		int x = 0;
-        while(x < n)
-          x = x + 1;
+    if (n > 3) {
+      if (n < 5) {
+        return 4;
+      } else {
+        return 6;
+      }
+    } else {
+      return 1;
+    }
 	}
 	public static void main(String[] args) {	
 		test(0);

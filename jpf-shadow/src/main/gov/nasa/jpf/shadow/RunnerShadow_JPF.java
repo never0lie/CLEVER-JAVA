@@ -29,7 +29,7 @@ public class RunnerShadow_JPF {
     public static void main(String[] args) throws IOException,ClassNotFoundException {
         System.out.println(">> Started Runner for jpf-shadow ...");
 
-        // SymExParameter[] subjects = {
+        SymExParameter[] subjects = {
 //                SymExParameter_JPF.Foo_JPF,
 //                SymExParameter_JPF.Joda_LocalToUTC,
 //                SymExParameter_JPF.Rational_abs,
@@ -37,15 +37,16 @@ public class RunnerShadow_JPF {
 //                SymExParameter_JPF.Rational_simplify,
 //                SymExParameter_JPF.WBS_update,
 //                SymExParameter_JPF.WBS_launch,
-              //  SymExParameter_JPF.Add,
+               SymExParameter_JPF.Add,
+               SymExParameter_JPF.IsBigger
                 // SymExParameter_JPF.GetSign
                 // SymExParameter_JPF.LoopMul2
-        // };
+        };
 
-        SymExParameter[] subjects = new SymExParameter[args.length];
-        for (int i = 0;i < args.length;i++) {
-          subjects[i] = (SymExParameter) deserialize(args[i]);
-        }
+        // SymExParameter[] subjects = new SymExParameter[args.length];
+        // for (int i = 0;i < args.length;i++) {
+        //   subjects[i] = (SymExParameter) deserialize(args[i]);
+        // }
 
         try {
             runExperiments(subjects);
