@@ -1,4 +1,4 @@
-package examples.neq.LoopMult2;
+package examples.eq.LoopMult2;
 
 class Loopmult2_1c {
     int change(int oldVal, int newVal) {
