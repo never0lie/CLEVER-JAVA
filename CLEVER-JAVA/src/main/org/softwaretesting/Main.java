@@ -10,6 +10,9 @@ import gov.nasa.jpf.shadow.RunnerShadow_JPF;
 import gov.nasa.jpf.shadow.SymExParameter;
 
 public class Main {
+    // This is the only option we have -- hacking the main method of RunnerShadow_JPF
+    // with passing the config as serialized stringso that we can avoid all
+    // kinds of classpath issues 
     public static void main(String[] args) throws IOException, ClassNotFoundException{
       // System.out.println("this is a test!");
       SymExParameter Add = new SymExParameter("${jpf-shadow}/build/jpf-shadow.jar",
@@ -27,3 +30,5 @@ public class Main {
       return Base64.getEncoder().encodeToString(baos.toByteArray()); 
   }
 }
+
+// java -cp "jpf-shadow/build/*:jpf-core/build/*:jpf-symbc/build/*:jpf-symbc/lib/*:CLEVER-JAVA/build/CLEVER-JAVA.jar" org.softwaretesting.Main

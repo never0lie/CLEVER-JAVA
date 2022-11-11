@@ -6,8 +6,12 @@ import java.util.HashMap;
 public class SymExParameter_JPF {
 
     public static final SymExParameter Add = new SymExParameter("${jpf-shadow}/build/jpf-shadow.jar",
-            "${jpf-shadow}/src/examples", "jpf2019.add", "Add", "add", "add(sym#sym)", 1, "",
+            "${jpf-shadow}/src/examples", "jpf2019.add", "Add", "add", "add(con#con)", 1, "",
             "evaluation-results/04_ADD_JPF/shadow-results/", null);
+    
+    public static final SymExParameter IsBigger = new SymExParameter("${jpf-shadow}/build/jpf-shadow.jar",
+            "${jpf-shadow}/src/examples", "jpf2019.isbigger", "IsBigger", "isBigger", "isBigger(con#con)", 1, "",
+            "evaluation-results/04_ISBIGGER_JPF/shadow-results/", null);
 
     public static final SymExParameter GetSign = new SymExParameter("${jpf-shadow}/build/jpf-shadow.jar",
             "${jpf-shadow}/src/examples", "jpf2019.getsign", "GetSign", "lib", "lib(sym)", 1, "",
