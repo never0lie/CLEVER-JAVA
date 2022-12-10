@@ -1,0 +1,47 @@
+symbolic.min_int=-100
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=927
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-100.0
+symbolic.max_double=100.0
+JavaPathfinder core system v8.0 - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+neq.LoopMult2.Loopmult2_1c.main()
+
+====================================================== search started: 12/9/22 10:24 PM
+
+====================================================== Method Summaries
+Inputs: a_CONCRETE,,b_CONCRETE,
+No path conditions for neq.LoopMult2.Loopmult2_1c.foo(java.lang.Integer@1e2,java.lang.Integer@1e2)
+Paths explored: 1
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=14,visited=0,backtracked=14,end=1
+search:             maxDepth=8,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=7
+heap:               new=607,released=12,maxLive=605,gcCycles=8
+instructions:       3347
+max memory:         153MB
+loaded code:        classes=60,methods=1283
+
+====================================================== search finished: 12/9/22 10:24 PM
+classpath=${jpf-shadow}/build/jpf-shadow.jar
+sourcepath=${jpf-shadow}/src/examples
+package=neq.LoopMult2
+class=Loopmult2_1c
+method=foo(con#con)
+
+
+PathCondition: FALSE
