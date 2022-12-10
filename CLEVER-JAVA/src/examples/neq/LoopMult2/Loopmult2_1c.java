@@ -1,11 +1,11 @@
-package examples.neq.LoopMult2;
+package neq.LoopMult2;
 
 class Loopmult2_1c {
     int change(int oldVal, int newVal) {
         return oldVal;
     }
 
-    int change(boolean oldVal, boolean newVal) {
+    boolean change(boolean oldVal, boolean newVal) {
         return oldVal;
     }
 

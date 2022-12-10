@@ -1,0 +1,173 @@
+symbolic.min_int=-100
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=800
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-100.0
+symbolic.max_double=100.0
+JavaPathfinder core system v8.0 - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+eq.loopmult130.Loopmult130_1c.main()
+
+====================================================== search started: 12/9/22 7:59 PM
+ifeq: Concrete executions diverge at line 9 (old: true, new: false).
+
+====================================================== Method Summaries
+Inputs: x
+
+eq.loopmult130.Loopmult130_1c.foo(113)	--> Diff in line: 9, Type: diffFalse	(Return Value: 12769)
+Paths explored: 1
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=923,visited=0,backtracked=923,end=1
+search:             maxDepth=346,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=575
+heap:               new=833,released=238,maxLive=605,gcCycles=344
+instructions:       8821
+max memory:         218MB
+loaded code:        classes=60,methods=1283
+
+====================================================== search finished: 12/9/22 7:59 PM
+classpath=${jpf-shadow}/build/jpf-shadow.jar
+sourcepath=${jpf-shadow}/src/examples
+package=eq.loopmult130
+class=Loopmult130_1c
+method=foo(sym)
+
+
+METHOD_END; SAT = true
+x=113
+constraint # = 118
+0 = 0 &&
+114 > x &&
+113 <= x &&
+112 <= x &&
+111 <= x &&
+110 <= x &&
+109 <= x &&
+108 <= x &&
+107 <= x &&
+106 <= x &&
+105 <= x &&
+104 <= x &&
+103 <= x &&
+102 <= x &&
+101 <= x &&
+100 <= x &&
+99 <= x &&
+98 <= x &&
+97 <= x &&
+96 <= x &&
+95 <= x &&
+94 <= x &&
+93 <= x &&
+92 <= x &&
+91 <= x &&
+90 <= x &&
+89 <= x &&
+88 <= x &&
+87 <= x &&
+86 <= x &&
+85 <= x &&
+84 <= x &&
+83 <= x &&
+82 <= x &&
+81 <= x &&
+80 <= x &&
+79 <= x &&
+78 <= x &&
+77 <= x &&
+76 <= x &&
+75 <= x &&
+74 <= x &&
+73 <= x &&
+72 <= x &&
+71 <= x &&
+70 <= x &&
+69 <= x &&
+68 <= x &&
+67 <= x &&
+66 <= x &&
+65 <= x &&
+64 <= x &&
+63 <= x &&
+62 <= x &&
+61 <= x &&
+60 <= x &&
+59 <= x &&
+58 <= x &&
+57 <= x &&
+56 <= x &&
+55 <= x &&
+54 <= x &&
+53 <= x &&
+52 <= x &&
+51 <= x &&
+50 <= x &&
+49 <= x &&
+48 <= x &&
+47 <= x &&
+46 <= x &&
+45 <= x &&
+44 <= x &&
+43 <= x &&
+42 <= x &&
+41 <= x &&
+40 <= x &&
+39 <= x &&
+38 <= x &&
+37 <= x &&
+36 <= x &&
+35 <= x &&
+34 <= x &&
+33 <= x &&
+32 <= x &&
+31 <= x &&
+30 <= x &&
+29 <= x &&
+28 <= x &&
+27 <= x &&
+26 <= x &&
+25 <= x &&
+24 <= x &&
+23 <= x &&
+22 <= x &&
+21 <= x &&
+20 <= x &&
+19 <= x &&
+18 <= x &&
+17 <= x &&
+16 <= x &&
+15 <= x &&
+14 <= x &&
+13 <= x &&
+12 <= x &&
+11 <= x &&
+10 <= x &&
+9 <= x &&
+8 <= x &&
+7 <= x &&
+6 <= x &&
+5 <= x &&
+4 <= x &&
+3 <= x &&
+2 <= x &&
+1 != 0 &&
+1 <= x &&
+x < 147 &&
+x >= 113
+
+
+#PROPERTY_VIOLATED = 0
+#Total = 1

@@ -1,0 +1,105 @@
+symbolic.min_int=-100
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=800
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=-100.0
+symbolic.max_double=100.0
+JavaPathfinder core system v8.0 - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+eq.loopmult55.Loopmult55_1c.main()
+
+====================================================== search started: 12/9/22 7:59 PM
+ifeq: Concrete executions diverge at line 9 (old: true, new: false).
+
+====================================================== Method Summaries
+Inputs: x
+
+eq.loopmult55.Loopmult55_1c.foo(45)	--> Diff in line: 9, Type: diffFalse	(Return Value: 2025)
+Paths explored: 1
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=379,visited=0,backtracked=379,end=1
+search:             maxDepth=142,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=235
+heap:               new=652,released=57,maxLive=605,gcCycles=140
+instructions:       5421
+max memory:         153MB
+loaded code:        classes=60,methods=1283
+
+====================================================== search finished: 12/9/22 7:59 PM
+classpath=${jpf-shadow}/build/jpf-shadow.jar
+sourcepath=${jpf-shadow}/src/examples
+package=eq.loopmult55
+class=Loopmult55_1c
+method=foo(sym)
+
+
+METHOD_END; SAT = true
+x=45
+constraint # = 50
+0 = 0 &&
+46 > x &&
+45 <= x &&
+44 <= x &&
+43 <= x &&
+42 <= x &&
+41 <= x &&
+40 <= x &&
+39 <= x &&
+38 <= x &&
+37 <= x &&
+36 <= x &&
+35 <= x &&
+34 <= x &&
+33 <= x &&
+32 <= x &&
+31 <= x &&
+30 <= x &&
+29 <= x &&
+28 <= x &&
+27 <= x &&
+26 <= x &&
+25 <= x &&
+24 <= x &&
+23 <= x &&
+22 <= x &&
+21 <= x &&
+20 <= x &&
+19 <= x &&
+18 <= x &&
+17 <= x &&
+16 <= x &&
+15 <= x &&
+14 <= x &&
+13 <= x &&
+12 <= x &&
+11 <= x &&
+10 <= x &&
+9 <= x &&
+8 <= x &&
+7 <= x &&
+6 <= x &&
+5 <= x &&
+4 <= x &&
+3 <= x &&
+2 <= x &&
+1 != 0 &&
+1 <= x &&
+x < 65 &&
+x >= 45
+
+
+#PROPERTY_VIOLATED = 0
+#Total = 1

@@ -15,9 +15,11 @@ class LoopMul55_1c {
   }
 
   public int loopMul55(int x){
-    if (x >= 45 and x < 65):
-		  return lib(x, 55)
-	  return 0
+    if (x >= 45 && x < 65) {
+		  return lib(x, 55);
+    }
+
+	  return 0;
   }
 
   public static void main(String[] args) {
